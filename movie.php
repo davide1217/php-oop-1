@@ -1,7 +1,9 @@
 <?php
 
-class Movie {
+$movies = [];
 
+class Movie {
+  public $movies = array();
   public $title;
   public $description;
   public $producedBy;
@@ -13,7 +15,7 @@ class Movie {
     $this->rating = $this->getRating($_vote);
   }
 
-  public function getRating($_vote){
+  private function getRating($_vote){
     if ($_vote < 3) {
       return 'bad';
     } 
@@ -24,8 +26,6 @@ class Movie {
       return 'excellent';
     }
   }
-  
 }
-
 
 ?>
